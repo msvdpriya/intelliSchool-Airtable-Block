@@ -1,7 +1,6 @@
 import sys
 import re
 import json
-from punctuator import Punctuator
 import requests
 import os
 from youtube_transcript_api import YouTubeTranscriptApi

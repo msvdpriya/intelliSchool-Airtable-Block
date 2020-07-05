@@ -9,8 +9,9 @@ import re
 import json
 from datetime import datetime
 import text_processor
-import urlparse
-
+import urllib.parse as urlparse
+from urllib.parse import parse_qs
+from urllib.request import urlretrieve
 
 app = flask.Flask(__name__)
 CORS(app)
@@ -20,23 +21,26 @@ app.config["DEBUG"] = True
 @app.route('/', methods=['POST'])
 def home():
     req_data = request.get_json()
-
+    processor = None
     if req_data['text']!='':
-        text = req_data['text']
-        
+        processor = text_processor.TextProcessor(text=req_data['text'])
     elif req_data['url']!='':
         url = req_data['url']
-        url_data = urlparse.urlparse(str(url))
-        query = urlparse.parse_qs(url_data.query)
-        video_id = query["v"][0]
-        text = text_processor.TextProcessor(video_id=video_id)
-    elif req_data['isAttachment']:
-        text = ''
+        parsed = urlparse.urlparse(url)
+        video_id = (parse_qs(parsed.query)['v'])
+        processor = text_processor.TextProcessor(video_id = video_id)
+        processor.get_transcript()
 
-    processor = text_processor.TextProcessor(text=text)
+
+    elif req_data['attachment']!='':
+        urlretrieve(req_data['attachment']['url'], req_data['attachment']['filename'])
+        processor = text_processor.TextProcessor(filepath=req_data['attachment']['filename'])
+        processor.pdf_to_text()
+
+    #processor = text_processor.TextProcessor(text=text)
     notes = processor.get_summary(ratio=0.5)
 
-    quiz = quiz_generator.Quiz(transcribed_text=text)
+    quiz = quiz_generator.Quiz(transcribed_text= vars(processor)['text'])
     quiz = quiz.generate_questions()
 
     summary = processor.get_summary(word_count=100)

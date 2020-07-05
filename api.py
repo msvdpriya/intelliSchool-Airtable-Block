@@ -21,7 +21,6 @@ app.config["DEBUG"] = True
 @app.route('/', methods=['POST'])
 def home():
     req_data = request.get_json()
-    processor = None
     if req_data['text']!='':
         processor = text_processor.TextProcessor(text=req_data['text'])
     elif req_data['url']!='':

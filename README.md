@@ -1,5 +1,7 @@
 # intelliSchool-Airtable-Block
 
+Airtable block that automatically generates quiz, summary and key points for any document, video or notes given by student using Natural Language Processing and Machine Learning
+
 ## Inspiration
 
 In the midst of COVID-19, the whole world has realised the power of online learning and the impact it can have on millions of students. Be it K-12 or higher education, virtual learning is talk of the town. However, many student are facing challenges or stressful circumstances and worry that they are falling behind and their grades will suffer.

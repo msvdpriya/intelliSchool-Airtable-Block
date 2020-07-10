@@ -1,6 +1,6 @@
 # intelliSchool-Airtable-Block
 
-Airtable block that automatically generates quiz, summary and key points for any document, video or notes given by student using Natural Language Processing and Machine Learning
+### intelliSchool is an Airtable block that automatically generates quiz, summary and key points for any document, video or notes given by student using Natural Language Processing and Machine Learning
 
 ## Inspiration
 
@@ -44,9 +44,12 @@ Documents: .csv, .doc, .docx, .eml, .epub, .json, .html, .mp3, .pdf, .pptx, .txt
 
 intelliSchool block can also be used by professional. For Example: It can be used by professional to generate summary of meeting to be sent to their clients or team members.
 
+## See the block running
 
+#### Home
 ![home](https://raw.githubusercontent.com/msvdpriya/intelliSchool-Airtable-Block/master/images/home.gif "Home")
 
+#### Quiz
 ![quiz](https://raw.githubusercontent.com/msvdpriya/intelliSchool-Airtable-Block/master/images/quiz.gif "Quiz")
 
 ## How We built it
@@ -77,3 +80,12 @@ We learnt about wide variety of use cases Airtable can be used for. I also learn
 - Add analytics for parents to better understand how their kids are performing
 - In smart notes section, we want show links to relevant websites to read more about the central topic of the video
 - Generate pre-requisites - add links to learn about most important sub-topics related to the video as pre-requisites
+
+## How to run this block
+
+1. Create a new base
+
+2. Create a new block in your new base (see
+   [Create a new block](https://airtable.com/developers/blocks/guides/hello-world-tutorial#create-a-new-block)
+
+3. From the root of your new block, run `block run`.

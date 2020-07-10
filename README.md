@@ -86,6 +86,6 @@ We learnt about wide variety of use cases Airtable can be used for. I also learn
 1. Create a new base
 
 2. Create a new block in your new base (see
-   [Create a new block](https://airtable.com/developers/blocks/guides/hello-world-tutorial#create-a-new-block)
+   [Create a new block](https://airtable.com/developers/blocks/guides/hello-world-tutorial#create-a-new-block))
 
 3. From the root of your new block, run `block run`.

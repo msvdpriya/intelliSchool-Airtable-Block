@@ -45,6 +45,10 @@ Documents: .csv, .doc, .docx, .eml, .epub, .json, .html, .mp3, .pdf, .pptx, .txt
 intelliSchool block can also be used by professional. For Example: It can be used by professional to generate summary of meeting to be sent to their clients or team members.
 
 
+![home](https://raw.githubusercontent.com/msvdpriya/intelliSchool-Airtable-Block/master/images/home.gif "Home")
+
+![quiz](https://raw.githubusercontent.com/msvdpriya/intelliSchool-Airtable-Block/master/images/quiz.gif "Quiz")
+
 ## How We built it
 
 As and when user creates a new row in the airtable, it will send the corresponding video url, document url or texual content to the backend powered by Python, Machine learning and Natural Language processing.

@@ -83,9 +83,11 @@ We learnt about wide variety of use cases Airtable can be used for. I also learn
 
 ## How to run this block
 
-1. Create a new base
+1. Create a new base. 
 
 2. Create a new block in your new base (see
    [Create a new block](https://airtable.com/developers/blocks/guides/hello-world-tutorial#create-a-new-block))
 
-3. From the root of your new block, run `block run`.
+3. From the root of your new block, run `block run`. Enjoy learning with intelliSchool on Airtable Blocks!
+
+Note: You don't have to run backend code that is present in server folder(Optional). It has already been hosted by us.
